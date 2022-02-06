@@ -43,7 +43,7 @@ body {
     align-items: center;
     background-color: #1F2937;
     display: flex;
-    
+    flex-wrap: wrap;
     gap: 8px;
     justify-content: center;
     padding: 50px;
@@ -56,19 +56,15 @@ body {
     gap: 8px;
     padding: 16px;
     width: 200px;
-    
 }
 
 .top-content-figure {
     align-items: center;
     background-color: #797979;
     flex: 1 1 0;
-    flex: wrap;
     justify-content: center;
     padding: 12px;
 }
-
-
 
 .top-content-header h2{
     color: #F9FAF8;
@@ -82,18 +78,25 @@ body {
 }
 
 .top-content-header button{
+    border: 2px solid #3882F6;
     border-radius: 10px;
     background-color: #3882F6;
     color: #F9FAF8;
-    padding: 8px 20px;
+    padding: 6px 30px;
+    cursor: pointer;
+}
+
+.top-content-header button:hover{
+    border: 2px solid #F9FAF8;
+    border-radius: 10px;
+    background-color: #F9FAF8;
+    color: #3882F6;
 }
 
 .top-content-figure img {
     display: block;
     max-width: 100%;
     height: auto;
-    /* margin-left: auto;
-    margin-right: auto; */
 }
 
 .byline {
@@ -112,31 +115,51 @@ body {
     align-items: center;
     justify-content: center;
     padding: 50px;
+    gap: 16px;
 }
 
 .second-container h3{
     color: #1F2937;
     font-size: 36px;
     font-weight: bolder;
+    margin-bottom: 10px;
 }
-
 
 .img-box-container {
     display: flex;
     justify-content: center;
-    gap: 16px;
+    text-align: center;
+    gap: 40px;
 }
 
-.image-box {
+.img-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:4px;
+
+}
+
+/* .image {
     width: 200px;
-    height: 200px;
+    height: auto;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+} */
+
+.image-box img {
+    width: 200px;
+    height: auto;
+    border: solid 5px #3b82f5;
+    border-radius: 10px;
+    max-width: 100%;
 }
 
-.image-box img{
-    border: solid 1px #3b82f5;
-    border-radius: 4px;
-    max-width: 100%;
+.image-figcap {
+    color: #1F2937;
+    font-weight: 500;
 }
 
 /* Third container */
@@ -178,8 +201,12 @@ body {
     color: #F9FAF8;
     background-color: #3882F6;
     display: flex;
-    padding: 16px;
+    flex-wrap: wrap;
+    padding: 16px 20px;
     align-items: center;
+    justify-content: space-between;
+    border-radius: 4px;
+    gap: 40px;
 }
 
 .shill-box h3 {
@@ -192,9 +219,18 @@ body {
 
 .shill-box button {
     color: #F9FAF8;
-    background-color: transparent;
-    border: #F9FAF8;
-    border-radius: 6px;
+    background-color: #3882F6;
+    border: solid 2px #F9FAF8;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 6px 16px;
+}
+
+.shill-box button:hover {
+    color: #3882F6;
+    background-color: #F9FAF8;
+    /* border: solid 2px #F9FAF8; */
+    border-radius: 10px;
     font-weight: bold;
     padding: 6px 16px;
 }
